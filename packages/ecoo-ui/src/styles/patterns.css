@@ -1,0 +1,37 @@
+/* Patrones gráficos IDEA.jpeg — ondas y puntos */
+.ec-waves-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.ec-waves-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 80% at 50% 100%, rgba(165, 214, 167, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse 90% 60% at 80% 20%, rgba(102, 187, 106, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ec-dots-bg {
+  background-image: radial-gradient(circle, rgba(46, 125, 50, 0.08) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.ec-sun-glow {
+  position: relative;
+}
+
+.ec-sun-glow::after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 192, 45, 0.35) 0%, transparent 70%);
+  top: -8px;
+  right: -8px;
+  pointer-events: none;
+}

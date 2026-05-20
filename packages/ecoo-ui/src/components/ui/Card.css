@@ -1,0 +1,17 @@
+.ec-card {
+  background: var(--ec-white);
+  border: 1px solid var(--ec-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow var(--duration), transform var(--duration);
+}
+
+.ec-card--glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-color: var(--glass-border);
+}
+
+.ec-card--sm { padding: 0.85rem 1rem; }
+.ec-card--md { padding: 1.15rem 1.25rem; }
+.ec-card--lg { padding: 1.5rem 1.65rem; }

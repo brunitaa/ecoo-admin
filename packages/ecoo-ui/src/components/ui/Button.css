@@ -1,0 +1,66 @@
+.ec-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--duration-fast), box-shadow var(--duration-fast), color var(--duration-fast);
+  text-decoration: none;
+}
+
+.ec-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.ec-btn--sm { padding: 0.45rem 0.85rem; font-size: 0.8125rem; }
+.ec-btn--md { padding: 0.65rem 1.15rem; font-size: 0.9375rem; }
+.ec-btn--lg { padding: 0.85rem 1.5rem; font-size: 1rem; }
+
+.ec-btn--primary {
+  background: var(--ec-gradient-hero);
+  color: var(--ec-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.ec-btn--primary:hover:not(:disabled) {
+  box-shadow: var(--shadow-md);
+}
+
+.ec-btn--secondary {
+  background: var(--ec-white);
+  color: var(--ec-forest);
+  border: 1px solid var(--ec-border-strong);
+}
+
+.ec-btn--ghost {
+  background: transparent;
+  color: var(--ec-forest-mid);
+}
+
+.ec-btn--ghost:hover:not(:disabled) {
+  background: var(--ec-pale);
+}
+
+.ec-btn--danger {
+  background: var(--ec-danger);
+  color: var(--ec-white);
+}
+
+.ec-btn--coin {
+  background: var(--ec-gradient-coin);
+  color: var(--ec-coin-txt);
+  box-shadow: var(--shadow-sm);
+}
+
+.ec-btn__spin {
+  animation: ec-spin 0.8s linear infinite;
+}
+
+@keyframes ec-spin {
+  to { transform: rotate(360deg); }
+}
